@@ -58,7 +58,7 @@ public class Market {
 	}
 
 	private <T extends Posture> void updatePostures(List<T> l, Ask a, Bid b) {
-		//FIXME Support matching the remaining of an unconsumed posture
+		//FIXME Support matching the remaining of an unconsumed posture. YEAH!
 		if (a.getQuantity().compareTo(b.getQuantity()) < 0){
 			l.remove(a);
 			b.setQuantity(b.getQuantity().subtract(a.getQuantity()));
